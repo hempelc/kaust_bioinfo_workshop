@@ -15,7 +15,7 @@ mamba activate apscale
 module load blast
 
 # Run apscale
-apscale_wrapper.py --sequence_dir example_sequences \
+apscale_wrapper.py --sequence_dir kaust_bioinfo_workshop_files/example_sequences \
 	--project_name kaust_bioinformatics_workshop \
 	--forward_primer GGWACWGGWTGAACWGTWTAYCCYCC \
 	--reverse_primer TANACYTCNGGRTGNCCRAARAAYCA \
