@@ -27,6 +27,6 @@ apscale_wrapper.py --sequence_dir kaust_bioinfo_workshop_files/example_sequences
 	--remove_negative_controls True \
 	--negative_controls LF-STNEG1 \
 	--run_blast True \
-	--database MIDORI2_UNIQ_NUC_GB259_CO1_BLAST/MIDORI2_UNIQ_NUC_GB259_CO1_BLAST \
+	--database kaust_bioinfo_workshop_files/MIDORI2_UNIQ_NUC_GB259_CO1_BLAST/MIDORI2_UNIQ_NUC_GB259_CO1_BLAST \
 	--database_format midori2 \
 	--cores 40
