@@ -17,5 +17,5 @@ makeblastdb -in ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_s
 blastn -query ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/OTU_1.fasta \
  -db ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/ncbi_phosichthyidae_coi.fasta \
  -out blast_output.tsv \
- -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore staxid" \
+ -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
  -evalue 1e-05
