@@ -11,23 +11,23 @@ module purge
 module load blast
 
 # Make the blast db
-makeblastdb -in ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/ncbi_phosichthyidae_coi.fasta \
+makeblastdb -in ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/ncbi_myctophidae_coi.fasta \
 	-dbtype nucl
 
 # Run blast
 blastn -query ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/OTU_1.fasta \
-	-db ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/ncbi_phosichthyidae_coi.fasta \
+	-db ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/ncbi_myctophidae_coi.fasta \
 	-out blast_output.tsv \
 	-outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
 	-evalue 1e-05
 
 # Make the blast db
-makeblastdb -in ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/ncbi_phosichthyidae_coi_modified.fasta \
+makeblastdb -in ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/ncbi_myctophidae_coi_modified.fasta \
 	-dbtype nucl
 
 # Run blast
 blastn -query ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/OTU_1.fasta \
-	-db ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/ncbi_phosichthyidae_coi_modified.fasta \
+	-db ~/kaust_bioinfo_workshop/kaust_bioinfo_workshop_files/blast_db_setup/ncbi_myctophidae_coi_modified.fasta \
 	-out blast_modified_output.tsv \
 	-outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
 	-evalue 1e-05
