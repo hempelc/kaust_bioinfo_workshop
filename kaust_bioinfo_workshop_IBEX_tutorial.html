@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>IBEX_tutorial</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>kaust_bioinfo_workshop_IBEX_tutorial</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7498,6 +7498,44 @@ a.anchor-link {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6f2d2149-74c0-4fca-ae2b-1c965949e373">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Terminal command to log in to IBEX: <code>ssh [your_ID]@ilogin.ibex.kaust.edu.sa</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fd361ec4-f9d8-46e7-a8aa-0675f164a708">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>If you see a warning like this:</p>
+<pre><code>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+</code></pre>
+<p>Then run the command <code>ssh-keygen -R ilogin.ibex.kaust.edu.sa</code> first to update the host (IBEX) identification (the identification changes when they do major updates).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=42d70eec-e53d-4c75-a027-33a87229b431">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We will be using basic terminal commands like <code>cd</code>, <code>mkdir</code>, <code>wget</code>, <code>rm</code>, and a few others throughout this tutorial. Explaining these is out of the scope of this tutorial, but if you would like to learn or burhs up on these, you can find a great interactivetutorial (1h long) <a href="https://ubuntu.com/tutorials/command-line-for-beginners#1-overview">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=98f47d54-8ea4-4253-a436-6fac601f16dc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7526,7 +7564,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Make sure you're in your home directory:</p>
+<p>Make sure you're in your home directory (which you should be by default, this is just a sanity check):</p>
 </div>
 </div>
 </div>
@@ -7873,7 +7911,7 @@ For example, multiqc can be installed as shown <a href="https://anaconda.org/bio
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><code>echo -e '\n#Manually exported paths\nexport PATH=$PATH:/home/'"$(whoami)"'/programs/apscale_wrapper' &gt;&gt; ~/.bash_profile &amp;&amp; source ~/.bash_profile</code></p>
+<p><code>echo -e '\n#Manually exported paths\nexport PATH=$PATH:/home/'"$(whoami)"'/kaust_bioinfo_workshop/programs/apscale_wrapper' &gt;&gt; ~/.bash_profile &amp;&amp; source ~/.bash_profile</code></p>
 </div>
 </div>
 </div>
@@ -7939,7 +7977,7 @@ For example, multiqc can be installed as shown <a href="https://anaconda.org/bio
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><code>mamba activate krona &amp;&amp; ktUpdateTaxonomy.sh &amp;&amp; mamba deactivate krona</code></p>
+<p><code>mamba activate krona &amp;&amp; ktUpdateTaxonomy.sh &amp;&amp; mamba deactivate</code></p>
 </div>
 </div>
 </div>
@@ -8016,7 +8054,7 @@ For example, multiqc can be installed as shown <a href="https://anaconda.org/bio
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><code>wget --header="Host: drive.usercontent.google.com" --header="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" --header="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" --header="Accept-Language: en-US,en;q=0.9" --header="Cookie: CONSENT=PENDING+238; SOCS=CAESHAgCEhJnd3NfMjAyNDAxMDItMF9SQzQaAmVuIAEaBgiAmfKsBg; SID=fAgtNWQlH3PTQE33XKx_z5pNwzPj-pde5PGFKH1_FIlUiK_-uzzZnxsd_rE5mCEp83FqVg.; __Secure-1PSID=fAgtNWQlH3PTQE33XKx_z5pNwzPj-pde5PGFKH1_FIlUiK_-l8agA_b1J4uQawJ8DG1P3w.; __Secure-3PSID=fAgtNWQlH3PTQE33XKx_z5pNwzPj-pde5PGFKH1_FIlUiK_--iPUnxAdhQEYBdcMVOfVWg.; HSID=AY895b6yQh3ERBnKf; SSID=AYo1w_ypkxdWNJZp6; APISID=zW20S9QhUHd5O6BQ/A3ahD13pc-c7fiu5h; SAPISID=vInNTptJkQe-o4ZR/A-gXcuimBrHpwkjBL; __Secure-1PAPISID=vInNTptJkQe-o4ZR/A-gXcuimBrHpwkjBL; __Secure-3PAPISID=vInNTptJkQe-o4ZR/A-gXcuimBrHpwkjBL; AEC=Ae3NU9Pcnwo7fX1Y44YCSH1DD97iIkOTQ1hF5mcn6RcSB4GoNQsYkezF1d8; NID=511=N5eBkHK_g_3jKNGBOSAbaWKR8uU3gfv7-Yj6zFcKYxwq8yifhRWkGillvUx76Ym9qlaoosfzj0M8vDDE9chSGcMpFkyLSJ0kTeskiihIjjbxXpR1XEs1DNuHHb4EngByMLdOH3T2_CbOJwjc4UkDNx5j8ezCJbJ-Xo4Vj80bXegGkJeW-mMeh0RPHJej_iaDllBGfgBZmK65rytVId-6ZmzZw3fjtUDX9w6ROJet4udX7Y_v8cfMzpr8_VGtWMNEwF8UAEENQKLEIRsSFO6qsCMbPkwkGN3ozjwAjhxDFtfOP60hQlBDB07o44gwlZt88w_jr1YS0eZrytbaLhyRaSMiv3JtB7o4Tfy_iD3cMWhUX9Tah6CTIZnKLDIbZQwM4ofosoAho-WsQ8JFOvDqSkTayID5MyXJsNax7PmsJiHzIkM3F7vun-B1Bxv_EW5Hfqg; 1P_JAR=2024-01-19-23; __Secure-ENID=17.SE=phTR0YJslGNoHRdC7V5qpmCYazlGyDzZNTty0q6xooH5qAdxe8wNArCqPTs8xnX_kEjamFr5q6rKakaFNPzLN8PYUyaCT6T4-1QFMJ0RHM0b-0dAmCgxC9oiFzW7nnOrxVQvyNU7mamZKxiimTraF1Wri6U9beW0J8uTsnVlOVUv0q2KGgi67dYqjD7hh9AoLt0aaZDuyr9aV2tYQqq8Fj6kOV3Aej-Tfj5gImFIwhnrihjTWLE5dmMqHxIapt0BlKG4wOtHh4Sb; __Secure-1PSIDTS=sidts-CjIBPVxjSvc6nIvT0_2MEjKb0q6VKdKIxwX8n9OtTaQXMSj3VwmSHOUaxVsPUf-Wnwho2RAA; __Secure-3PSIDTS=sidts-CjIBPVxjSvc6nIvT0_2MEjKb0q6VKdKIxwX8n9OtTaQXMSj3VwmSHOUaxVsPUf-Wnwho2RAA; SIDCC=ABTWhQGtYTjREbjYswNUUslB4UhhMB1mprMRB1EqqPb_3Fm0OnRQQZPVpuBLRuoSmOutXtP0yIiX; __Secure-1PSIDCC=ABTWhQHTTNCTiznY3ld2rbu1LtLi6rpBLOZNbmrlLbydOfZnE0QGG0Hv_i1f-1VTiBTKa9jq4zk; __Secure-3PSIDCC=ABTWhQGUR5aPEShdmYCFnHgbBIbhNEAY_ks4vJmpFMri5hkoQMxvfZXog_6ZfhH1X-RCKzQA5ls" --header="Connection: keep-alive" "https://drive.usercontent.google.com/download?id=1134kQbJC76VyXe8Kdy-MfE_XSG1KIA7f&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=73de8872-8f7e-4950-9e4f-d97222fc0be4&amp;at=APZUnTWBelFkm3Ab6e2cHF3AflDn:1705708397053" -c -O 'kaust_bioinfo_workshop_files.tar.gz'</code></p>
+<p><code>wget --header="Host: drive.usercontent.google.com" --header="User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" --header="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" --header="Accept-Language: en-US,en;q=0.9" --header="Cookie: CONSENT=PENDING+238; SOCS=CAESHAgCEhJnd3NfMjAyNDAxMDItMF9SQzQaAmVuIAEaBgiAmfKsBg; AEC=Ae3NU9OiFVn3JOkgN9bT-HgnZS-6ta27bi3Qf6QlHlBCr8l7q6aXg8fk8Zc; 1P_JAR=2024-01-24-19; SID=g.a000fggtNdj0FV2t61laP2tLLvvK0pxgFoTZr5fZuOElL-2xSNTeMHGG7hDpXI_snCr0BxmyvwACgYKAZ8SAQASFQHGX2MiXNMqmylk3AEkJ4mZqMUdiBoVAUF8yKq4vJlMq98UCWzhbNluY7U90076; __Secure-1PSID=g.a000fggtNdj0FV2t61laP2tLLvvK0pxgFoTZr5fZuOElL-2xSNTe9CADaC4X2UGplER0yS6GzwACgYKAR0SAQASFQHGX2Mi7DmWVoTtJFqtB0_OxxohUBoVAUF8yKobKDzrpY9D0q8JKL-btIuX0076; __Secure-3PSID=g.a000fggtNdj0FV2t61laP2tLLvvK0pxgFoTZr5fZuOElL-2xSNTejnfnVAtjQERdvh9eY4hzawACgYKAYASAQASFQHGX2MiETYLDu-A1e14SFwIpQxG9BoVAUF8yKprrlUkTFagZU_3y_8_Ygmm0076; HSID=AC1wpwIoH4VVNyMFU; SSID=ApBmKfcnFBRp5BJKD; APISID=RGku7zcTup2RFN0V/ArJqE3sWi37GXihOU; SAPISID=aWuBniWH7X6YkiJL/AsHSNIYxsFAChAmFS; __Secure-1PAPISID=aWuBniWH7X6YkiJL/AsHSNIYxsFAChAmFS; __Secure-3PAPISID=aWuBniWH7X6YkiJL/AsHSNIYxsFAChAmFS; __Secure-ENID=17.SE=YE2o_RbT56xXkxm5kpba_FGZLG7WZ071xBxyVlAUpwtZjFv-LL10Ag7BFDe5kIBzIZQl7mjLO6KmYEUm0vY3PAhjMfF25busI2koH1nl_7KbufqrkXimURrBEcX9Y8pTS-bMTsvoaRxzPjK3S1LAieF_8j0cYg31bLsZ_9D6_P_Z8fBClzKAO3bmomVIwS1uc65BcN7t2q9p2pv7zojgm0fb4mkFrezNfjn9ciWZCaINM7g-t5EmANeZythn_HF-SqaFdqJouz97_yUcYrLbQbU; NID=511=hD9NbBiwWz03IaH6Sc1CR3_2W2Gg-npM91laA_QjjWb-wXb2aT2RtYiR7_nPMdq_NEqb1JFIYkql1s717QsHSmL379uHgg_NfsJh7ZLwaOSkFbvIW2MiL6Da71RaudN22fwmssj3pBa-TgtWHFFn8JfAqc5rowStwJOdVj4KlWf9GbwPSHEF5oXgRaEyNiP2chLVmo-fu38vPkir8TQ3RGV8lxXLET2lJF16w5CqLda68yxulFdMMWU1_IUi3ejBR9A_WmKwDg1wqjOtKiwbGvgpOCqXdVIzzHy1zwM6iSO1azprKpR259zLsjeLAdzK-c1yvj5Fr79s7xUtnlTdJmbLHRuo4EkF2oleFpDAqQ6sllePviJq4CuAMGrQAh65n0T6Yv6ZlDeNPm5PXrfTgCMsXamOtTEt7B8aUN0Et6cjTxt0r5FP6TluyrVWfi0_e4g; __Secure-1PSIDTS=sidts-CjIBPVxjSnD2PSpaPySqeIDbFPnvHHnTjPKpY0WZ-zEa1rKCBs1Zg-576nXziGrsNOTewhAA; __Secure-3PSIDTS=sidts-CjIBPVxjSnD2PSpaPySqeIDbFPnvHHnTjPKpY0WZ-zEa1rKCBs1Zg-576nXziGrsNOTewhAA; SIDCC=ABTWhQHbYbWO_pNqGjkJ_X3EqmhpYDoKsxMly-h8x1tu0eLE9tKJkdNDSn2iGUdJm2bXI_Srsg; __Secure-1PSIDCC=ABTWhQHxCEXGX-_K_dweliv7ma7nx5yBWqdO5bylvbEM2XOH28HfQrdAqoNtjKoSDp-Wc_3rOw; __Secure-3PSIDCC=ABTWhQGmnBJAmNo0yfngT0NfbkaKIYnTOtC-DEdaEqTJv-A2WhnfKRHPrv1oP8oIpklv7251kw" --header="Connection: keep-alive" "https://drive.usercontent.google.com/download?id=1134kQbJC76VyXe8Kdy-MfE_XSG1KIA7f&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=910b6522-b192-4fdc-bce4-379ca77ba0f3&amp;at=APZUnTU3-D5yZtpkm7_rY3Mc7jzZ:1706196498130" -c -O 'kaust_bioinfo_workshop_files.tar.gz'</code></p>
 </div>
 </div>
 </div>
